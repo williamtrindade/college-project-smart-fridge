@@ -101,7 +101,6 @@ class Product():
         c.execute('SELECT rowid FROM products WHERE name=?',
                   [name])
         d = c.fetchall()
-        print("data = {}".format(d))
         return len(d) != 0
 
     def findId(self, name):

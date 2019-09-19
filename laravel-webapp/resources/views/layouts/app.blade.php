@@ -18,19 +18,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Dashboard</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/products">Products</a>
+                        <a class="nav-link {!! Request::is('/')? 'active' : null !!}" href="/">
+                            Dashboard
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/transactions">Transactions</a>
+                        <a class="nav-link {!! Request::is('products')? 'active' : null !!}" href="/products">
+                            Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {!! Request::is('transactions')? 'active' : null !!}" href="/transactions">
+                            Transactions
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container" >
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
         @yield('content')
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
