@@ -3,7 +3,7 @@
 Projeto feito para a disciplina de Redes de computadores 'A' com foco
 em implementar um cliente e servidor TCP e UDP com uma ideia criativa.
 
-# Idea
+# Ideia
 Uma geladeira inteligente que identifica o produto e registra suas transações (inserção e remoção de dentro da geladeira)
 
 ## Cliente (python)
