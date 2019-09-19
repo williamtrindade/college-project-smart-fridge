@@ -23,14 +23,14 @@ laravel.
 Foi usado sqlite.
 
 ## Schema
-### Product
+### Products
  - id         : SERIAL
  - name       : VARCHAR(30)
  - amount     : INT
  - created_at : datetime
  - updated_at : datetime
 
-### Transaction
+### Transactions
  - id         : SERIAL
  - product_id : INT
  - date_time  : datetime
