@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """Servidor tcp e udp"""
 
@@ -29,7 +29,7 @@ def tcp_listener():
 
 
 def tcp_handler(conn, address):
-    print("Conexão TCP de: ", address)
+    print("Conexao TCP de: ", address)
     msg = conn.recv(1024).decode()
     ret = client_handler(msg)
     conn.send(ret.encode())
@@ -66,7 +66,7 @@ def client_handler(msg):
 
 class Product():
     def __init__(self):
-        self.conn = sqlite3.connect('database.db')
+        self.conn = sqlite3.connect('../laravel-webapp/database/database.sqlite')
 
     def __enter__(self):
         return self
@@ -82,14 +82,14 @@ class Product():
         print(name)
         if self.exists(name):
             prod_id = self.findId(name)
-            c.execute('UPDATE product SET qnt=qnt {} 1 WHERE id=?'
+            c.execute('UPDATE products SET amount=amount {} 1 WHERE id=?'
                       .format('+' if op == 'STOR' else '-'),
                       [prod_id])
         else:
-            c.execute('INSERT INTO product(name, qnt) VALUES (?, 1)', [name])
+            c.execute('INSERT INTO products(name, amount) VALUES (?, 1)', [name])
             prod_id = self.findId(name)
 
-        c.execute("""INSERT INTO transactions(id_product, date_time, opcode)
+        c.execute("""INSERT INTO transactions(product_id, date_time, opcode)
         VALUES (?, datetime('now'), ?)""", [prod_id, op])
         c.close()
         self.conn.commit()
@@ -98,7 +98,7 @@ class Product():
         """ Verifica se existe um produto com o nome igual a `name` """
 
         c = self.conn.cursor()
-        c.execute('SELECT rowid FROM product WHERE name=?',
+        c.execute('SELECT rowid FROM products WHERE name=?',
                   [name])
         d = c.fetchall()
         print("data = {}".format(d))
@@ -108,7 +108,7 @@ class Product():
         """ Retorna o id do produto com nome igual a `name` """
 
         c = self.conn.cursor()
-        c.execute('SELECT p.id FROM product p WHERE name=?', [name])
+        c.execute('SELECT p.id FROM products p WHERE name=?', [name])
         return c.fetchone()[0]
 
 
