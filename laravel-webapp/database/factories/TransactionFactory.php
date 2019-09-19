@@ -7,9 +7,9 @@ use Faker\Generator as Faker;
 
 $factory->define(Transaction::class, function (Faker $faker) {
     return [
-        'datetime'   => $faker->dateTime(),
-        'opcode'     => $faker->randomElement(['RETR', 'STOR']),
-        'product_id' => function () {
+        'date_time'   => $faker->dateTime(),
+        'opcode'      => $faker->randomElement(['RETR', 'STOR']),
+        'product_id'  => function () {
             return factory(App\Product::class)->create()->id;
         },
     ];

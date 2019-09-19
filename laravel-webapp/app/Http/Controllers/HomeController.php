@@ -18,5 +18,5 @@ class HomeController extends Controller
     {
         $productsQtt = $this->productRepository->all()->count();
         return view('home')->with('productsQtt', $productsQtt);
-    }
+    }   
 }

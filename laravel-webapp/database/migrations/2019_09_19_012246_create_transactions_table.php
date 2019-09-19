@@ -19,7 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->foreign('product_id')
                 ->references('id')->on('products')
                 ->onDelete('cascade');
-            $table->dateTime('datetime');	
+            $table->dateTime('date_time');	
             $table->char('opcode', 4);	
             $table->timestamps();
         });
