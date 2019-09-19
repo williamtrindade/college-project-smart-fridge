@@ -1,6 +1,6 @@
 # Projeto-Smart-Fridge
 
-Projeto feito para a disciplina de Redes de computadores 'A' com foco
+Projeto feito para a disciplina de Redes de computadores 'A', com foco
 em implementar um cliente e servidor TCP e UDP com uma ideia criativa.
 
 # Ideia
@@ -25,10 +25,10 @@ sqlite
 ### Product
  - id : SERIAL
  - name : VARCHAR(30)
- - qnt : INT
+ - amount : INT
 
-### Transação
+### Transaction
  - id : SERIAL
- - id_product: INT
+ - product_id: INT
  - datetime : datetime
  - opcode : CHAR(4) valores:[RETR, STOR]
