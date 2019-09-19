@@ -19,6 +19,11 @@ class ProductRepository implements EloquentRepository
         return $this->model->where('amount', '>', '0')->get();
     }
 
+    public function removed()
+    {
+        return $this->model->where('amount', '<', '0')->get();
+    }
+
     public function create($data)
     {
         return $this->model->create($data);

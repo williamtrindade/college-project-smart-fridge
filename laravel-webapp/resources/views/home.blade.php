@@ -8,10 +8,10 @@
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Products on Fridge now'],
+                labels: ['Products on Fridge now', 'Products removed from Fridge', 'Total of transactions'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [{{$productsQtt}}],
+                    label: '# of products',
+                    data: [{{$productsQtt}}, {{$productsRemovedQtt}}, {{$transactionsQtt}}],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',

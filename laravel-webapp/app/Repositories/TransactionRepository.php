@@ -13,7 +13,11 @@ class TransactionRepository implements EloquentRepository
     {
         $this->model = $model;
     }
-
+    
+    public function model()
+    {
+        return $this->model;
+    }
     public function all()
     {
         return $this->model->all();
