@@ -16,7 +16,7 @@ class ProductRepository implements EloquentRepository
 
     public function all()
     {
-        return $this->model->where('amount', '>', '0');
+        return $this->model->where('amount', '>', '0')->get();
     }
 
     public function create($data)
