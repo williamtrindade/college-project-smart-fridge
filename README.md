@@ -23,12 +23,16 @@ sqlite
 
 ## Schema
 ### Product
- - id : SERIAL
- - name : VARCHAR(30)
- - amount : INT
+ - id         : SERIAL
+ - name       : VARCHAR(30)
+ - amount     : INT
+ - created_at : datetime
+ - updated_at : datetime
 
 ### Transaction
- - id : SERIAL
- - product_id: INT
- - datetime : datetime
- - opcode : CHAR(4) valores:[RETR, STOR]
+ - id         : SERIAL
+ - product_id : INT
+ - datetime   : datetime
+ - opcode     : CHAR(4) valores:[RETR, STOR]
+ - created_at : datetime
+ - updated_at : datetime
