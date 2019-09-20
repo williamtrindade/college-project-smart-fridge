@@ -42,5 +42,5 @@ Foi usado sqlite.
 ## Funcionamento - Imagens
 ![dashboard](https://github.com/williamtrindade/Projeto-Smart-Fridge/blob/master/laravel-webapp/img/Screenshot_2019-09-19_23-12-19.png?raw=true)
 ![products](https://github.com/williamtrindade/Projeto-Smart-Fridge/blob/master/laravel-webapp/img/Screenshot_2019-09-19_23-12-49.png?raw=true)
-![transactions](https://github.com/williamtrindade/Projeto-Smart-Fridge/blob/master/laravel-webapp/img/Screenshot_2019-09-19_23-12-00.png?raw=true)
-![tcp_udp_client_and_server_storing](https://github.com/williamtrindade/Projeto-Smart-Fridge/blob/master/laravel-webapp/img/Screenshot_2019-09-19_23-12-03.png?raw=true)
+![transactions](https://github.com/williamtrindade/Projeto-Smart-Fridge/blob/master/laravel-webapp/img/Screenshot_2019-09-19_23-13-00.png?raw=true)
+![tcp_udp_client_and_server_storing](https://github.com/williamtrindade/Projeto-Smart-Fridge/blob/master/laravel-webapp/img/Screenshot_2019-09-19_23-15-03.png?raw=true)
